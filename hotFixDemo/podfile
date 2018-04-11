@@ -1,0 +1,6 @@
+
+platform:ios,'8.0'
+target 'hotFixDemo' do
+#pod 'JSPatch'
+pod 'JSPatch', '~> 1.1.3'
+end
