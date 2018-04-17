@@ -70,6 +70,10 @@
     
     NSLog(@"===%zd",self.dataSource[indexPath.row]);
     
+    JSViewController *vc = [[JSViewController alloc] init];
+    NSString *title = self.dataSource[indexPath.row];
+    vc.title = title;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

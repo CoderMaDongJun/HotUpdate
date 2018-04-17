@@ -11,11 +11,11 @@ defineClass('ViewController', {
 defineClass("JSViewController", {
             tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
             var row = indexPath.row()
-           
-            var content = self.dataSource()[row];
+            var content = self.dataSource().objectAtIndex(row);
             console.log(content);
-            var ctrl = JSViewController.alloc().initWithContent(content);
-            self.navigationController().pushViewController(ctrl);
+            var ctrl = JSViewController.alloc().init();
+            ctrl.setTitle(content)
+            self.navigationController().pushViewController_animated(ctrl, YES)
 
             }
 })
